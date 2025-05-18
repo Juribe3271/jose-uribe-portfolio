@@ -1,0 +1,75 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CheckCircle2 } from "lucide-react";
+
+export default function WorkdayAnalystPage() {
+  return (
+    <main className="p-6 max-w-4xl mx-auto space-y-6">
+      <section className="text-center">
+        <h1 className="text-4xl font-bold mb-2">Jose Uribe</h1>
+        <p className="text-lg">Business Systems Analyst | Chicago, IL</p>
+        <p className="text-sm text-muted-foreground">Joseuribe936@gmail.com | 773-209-7831</p>
+      </section>
+
+      <Card>
+        <CardContent className="p-4 space-y-2">
+          <h2 className="text-2xl font-semibold">Professional Summary</h2>
+          <p>
+            Analytical and tech-savvy Business Analyst with a background in Computer Science and experience using SQL, Power BI, Excel, and Workday to turn data into actionable insights. Skilled in building reports, mapping workflows, and supporting users in dynamic, fast-paced environments.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-4 space-y-4">
+          <h2 className="text-2xl font-semibold">Key Skills</h2>
+          <ul className="grid grid-cols-2 gap-2 text-sm">
+            {[
+              "Workday (familiarity)",
+              "Prism Analytics (basic awareness)",
+              "Power BI & Data Visualization",
+              "SQL & Relational Databases",
+              "Excel (PivotTables, VLOOKUP)",
+              "Salesforce, JIRA, Remedy",
+              "Data Modeling & Design",
+              "ETL/ELT Concepts",
+              "Python, Java, HTML"
+            ].map(skill => (
+              <li key={skill} className="flex items-center gap-2">
+                <CheckCircle2 className="text-green-600 w-4 h-4" /> {skill}
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-4 space-y-4">
+          <h2 className="text-2xl font-semibold">Recent Experience</h2>
+          <div>
+            <h3 className="font-bold">Support Specialist II – CME Group</h3>
+            <p className="text-sm text-muted-foreground">Sept 2024 – Present | Remote</p>
+            <ul className="list-disc ml-5 text-sm">
+              <li>Resolved connectivity and application issues in high-security environments</li>
+              <li>Provisioned secure devices and ensured policy compliance</li>
+              <li>Supported documentation and onboarding for new tools</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold">Technical Business Analyst – Community Impact Data Project</h3>
+            <p className="text-sm text-muted-foreground">Freelance</p>
+            <ul className="list-disc ml-5 text-sm">
+              <li>Built SQL reports and Power BI dashboards for nonprofits</li>
+              <li>Documented workflows and collaborated across teams</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+
+      <div className="text-center">
+        <Button size="lg">Download Resume PDF</Button>
+      </div>
+    </main>
+  );
+}
